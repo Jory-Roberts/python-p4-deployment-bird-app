@@ -12,8 +12,8 @@
     "switch": "^0.0.0"
   },
   "scripts": {
-    "build": "react-scripts build",
-    "start": "react-scripts start"
+    "build": "pip install -r requirements.txt && npm install --prefix client && npm run build --prefix client",
+    "start": "gunicorn --chdir server app:app"
   },
   "eslintConfig": {
     "extends": [
